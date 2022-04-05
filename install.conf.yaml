@@ -1,0 +1,36 @@
+- defaults:
+    link:
+      relink: true
+      force: true
+
+- clean: ['~']
+
+- link:
+    ~/.zshrc: .zshrc
+    ~/.gitconfig: .gitconfig
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  - 
+    command: ./brew.sh
+    description: Brew
+    stdout: true
+  - 
+    command: sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || true
+    description: Installing Oh My Zsh
+    stdout: true
+  - 
+    command: git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    description: Oh my ZSH auto suggestions plugin
+    stdout: true
+  - 
+    command: git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+    description: Oh my ZSH syntax highlight
+    stdout: true
+
+  - 
+    command: ./npm.sh
+    description: Installing NPM global packages
+    stdout: true
+
+    

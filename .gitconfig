@@ -1,0 +1,24 @@
+[user]
+	email = vasile.taranovici@gmail.com
+	name = Vasile Taranovici
+
+# git cfix "Video on scroll down pause"  // git commit -m "🐞 Fix Video on scroll down pause"
+[alias]
+    cap = "!f() { git commit -m \"$@\"; }; f"
+    cfix = "!f() { git cap \"🐞 Fix $@\"; }; f"
+    cref = "!f() { git cap \"♻️  $@\"; }; f"
+    cwip = "!f() { git cap \"🚧 $@\"; }; f"
+    cimp = "!f() { git cap \"👌 $@\"; }; f"
+	cui = "!f() { git cap \"🌈 $@\"; }; f"
+	cadd = "!f() { git cap \"📦 Add $@\"; }; f"
+	cbump = "!f() { git cap \"⬆️  Bump $@\"; }; f"
+	cdown = "!f() { git cap \"⬇️  Downgrade $@\"; }; f"
+	cperf= "!f() { git cap \"⚡️ $@\"; }; f"
+	cburn= "!f() { git cap \"🚨 $@\"; }; f"
+	cclean= "!f() { git cap \"✨ $@\"; }; f"
+	ctool= "!f() { git cap \"🛠  $@\"; }; f"
+	cedit= "!f() { git cap \"✏️ $@\"; }; f"
+	cfeat= "!f() { git cap \"⭐️ $@\"; }; f"
+	cmerge= "!f() { git cap \"🔀 Merge $@\"; }; f"
+
+
