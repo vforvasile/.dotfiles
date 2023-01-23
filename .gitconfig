@@ -22,3 +22,9 @@
 	cmerge= "!f() { git cap \"🔀 Merge $@\"; }; f"
 
 
+# for work email
+[includeIf "gitdir:~/Work/"]
+    path = ~/Work/.gitconfig_work
+[push]
+
+autoSetupRemote = true
